@@ -1,5 +1,5 @@
 # react-app
 ---------------------
-npm create vite@4.1.0
-npm install
-npm run dev
+1- npm create vite@4.1.0
+2- npm install
+3- npm run dev
