@@ -1,0 +1,13 @@
+* {
+  background-color: blueviolet;
+}
+
+h1 {
+  color: greenyellow;
+}
+
+ul li {
+  background: #cce5ff;
+  color: darkblue;
+  margin: 5px;
+}
