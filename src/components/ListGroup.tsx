@@ -1,3 +1,7 @@
+// import { MouseEvent } from "react";
+
+import { useState } from "react";
+
 function ListGroup() {
   let items = [
     "New York",
@@ -8,7 +12,7 @@ function ListGroup() {
     "Ryad",
   ];
   // override items to empty --- let = var >> override --- const don't override
-  items = [];
+  // items = [];
 
   // if (items.length === 0)
   //   return (
@@ -32,14 +36,30 @@ function ListGroup() {
 
   const getMessage = () => items.length === 0 && <p>No Items Found</p>;
 
+  // // Type annotation :)
+  // const handelClick = (event:MouseEvent) => {console.log(event);}
+
+  // const selectedIndex = -1;
+  const [selectedIndex, setSelectedIndex] = useState(-1);
+
   return (
     <>
       <h1>List Group</h1>
       {/* this is replacement of if statment "ternary operator" */}
       {getMessage()}
       <ul className="list-group">
-        {items.map((item) => (
-          <li className="list-group-item" key={item}>
+        {items.map((item, index) => (
+          <li
+            className={
+              selectedIndex === index
+                ? "list-group-item active"
+                : "list-group-item"
+            }
+            key={item}
+            onClick={() => {
+              setSelectedIndex(index);
+            }}
+          >
             {item}
           </li>
         ))}

@@ -7,7 +7,9 @@ h1 {
 }
 
 ul li {
-  background: #cce5ff;
-  color: darkblue;
   margin: 5px;
+}
+
+.active{
+  border-radius: 20px;
 }
